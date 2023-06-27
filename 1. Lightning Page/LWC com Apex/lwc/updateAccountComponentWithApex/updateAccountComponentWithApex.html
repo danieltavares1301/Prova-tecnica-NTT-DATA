@@ -1,0 +1,15 @@
+<template >
+    <lightning-card if:true={record}>
+        <div class="container">
+            <lightning-input type="text" label="Nome" value={accountName} onchange={handleAccountNameChange}></lightning-input>
+            <!--Número com tipo 'text' para também poder colocar '.', '/' e '-', se caso o usuário quiser (As validações do trigger permitem o usuário colocar esses 3 caracteres especiais)-->
+            <lightning-input type="text" name="accountNumber" value={accountNumberValue} label="Número da conta" onchange={handleAccountNumberChange}></lightning-input>
+            <h2 class="header">Tipo da conta</h2>
+            <lightning-input name = 'CPF' type="checkbox" label="CPF" checked={CPF} onchange={handleCheckboxChange}></lightning-input>
+            <lightning-input name = 'CNPJ' type="checkbox" label="CNPJ" checked={CNPJ} onchange={handleCheckboxChange}></lightning-input>
+            <div class="saveButton">
+                <lightning-button variant="brand" label="Salvar" onclick={handleSave}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
