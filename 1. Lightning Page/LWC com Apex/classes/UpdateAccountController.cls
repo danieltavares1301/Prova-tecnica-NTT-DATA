@@ -1,4 +1,4 @@
-public with sharing class UpdateAccount {
+public with sharing class UpdateAccountController {
     @AuraEnabled
     public static void updateAccountWithComponent(String accountId, String accountName, String accountNumber, String accountType){
         if(accountId!=null && accountName!=null && accountNumber!=null && accountType!=null){
